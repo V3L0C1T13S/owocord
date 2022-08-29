@@ -1,10 +1,10 @@
-import { log } from "@rikka/API/Utils";
 import { owoifyText } from "@rikka/API/Utils/strings/owoify";
 import RikkaPlugin from "@rikka/Common/entities/Plugin";
+import manifest from "./manifest.json";
 
 export default class ExamplePlugin extends RikkaPlugin {
   inject() {
-    log("owo");
+    this.log("owo");
 
     document.body.addEventListener("DOMNodeInserted", (event) => {
       if (event.target instanceof HTMLElement) {
